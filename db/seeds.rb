@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+%w(Mario Pacman Tetris).each do |game|
+  HighScore.create(game: game, score: rand(10_000)+1)
+end
